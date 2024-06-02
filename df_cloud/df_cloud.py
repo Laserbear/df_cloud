@@ -1,9 +1,9 @@
 import requests
 import pandas as pd
 
-URL = "https://df-cloud.org/"
+URL = "localhost"
 def to_cloud(df):
-    requests.post(URL+"upload", data=df.to_json)
+    requests.post(URL+"hash", data=df.to_json)
 
 def from_cloud(json_url):
     json = dict(request.get(json_url))
